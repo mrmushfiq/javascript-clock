@@ -1,9 +1,9 @@
-setInterval(function (){
-	var currentTime = new Date();
-	var hours = currentTime.getHours();
-	var minutes = currentTime.getMinutes();
-	var seconds = currentTime.getSeconds();
-	var period = "AM";
+setInterval(() => {
+	const currentTime = new Date();
+	let hours = currentTime.getHours();
+	let minutes = currentTime.getMinutes();
+	let seconds = currentTime.getSeconds();
+	let period = "AM";
 
 	if (hours >= 12){
 		period = "PM";
@@ -21,8 +21,8 @@ setInterval(function (){
 		seconds = "0" + seconds;
 	}
 
-	var clockTime = hours + ":" + minutes + ":" + seconds + " " + period;
-	var clock = document.getElementById('clock');
+	let clockTime = hours + ":" + minutes + ":" + seconds + " " + period;
+	let clock = document.getElementById('clock');
 
 	clock.innerText = clockTime;
 
